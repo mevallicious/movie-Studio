@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import Search from '../components/Search'
 import Card from '../components/Card'
 import axios from "axios"
 
+import { AuthDataContext } from '../context/AuthContext'
+import Navbar from '../components/Navbar'
+
 //api key- a3f80df2
 
 
+
 const Home = () => {
+  
+
 
   const [searchValue, setSearchValue] = useState("")
 
@@ -43,6 +49,8 @@ const Home = () => {
   } 
   return (
     <div className='home'>
+        <Navbar/>
+         
         <Search submitHandler={submitHandler} searchValue={searchValue} setSearchValue={setSearchValue} getData={getData}  />
         <div className="cards">
           {allMovies.map(movie => <Card movie={movie} />)}

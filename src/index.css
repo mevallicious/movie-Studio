@@ -10,6 +10,7 @@
   --purple: #8B5CF6;
   --pink: #EC4899;
   --cyan: #22D3EE;
+  --red:rgb(192, 44, 44);
 }
 
 *{
@@ -38,7 +39,8 @@ html,body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-top: -50px;
+  margin-bottom: 20px;
   background: rgba(7,8,12,0.6);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -71,7 +73,20 @@ html,body{
   border-radius: 999px;
 }
 
-.navbar a:hover{
+.navbar .logout{
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: var(--red);
+}
+
+.navbar button:active{
+  scale: 0.95;
+
+}
+
+.navbar a:hover,.navbar button:hover{
   color: #fff;
   text-shadow:
     0 0 8px rgba(139,92,246,.6),

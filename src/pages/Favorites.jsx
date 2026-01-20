@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Navbar from "../components/Navbar"
 
 const Favorites = () => {
 
@@ -14,7 +15,7 @@ const Favorites = () => {
 
   return (
     <div className="home">
-
+        <Navbar/>
         <h1 className="page-title">Your Favorites</h1>
         <p className="page-sub">
         Movies you love. Saved forever.
